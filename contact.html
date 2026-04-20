@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Ajay</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bg b1"></div>
+  <div class="bg b2"></div>
+
+  <header class="top">
+    <nav class="wrap nav">
+      <a href="index.html" class="logo">Ajay<span>.dev</span></a>
+      <button class="menu-btn" type="button">Menu</button>
+      <ul class="links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="theme-btn" type="button">Dark</button>
+    </nav>
+  </header>
+
+  <main class="sec wrap page">
+    <div class="head show">
+      <p class="small">Contact</p>
+      <h1>Let's connect for internships, software projects, or web development work.</h1>
+    </div>
+
+    <div class="grid two">
+      <div class="card show">
+        <h2>Contact details</h2>
+        <p>Email: ajaygaikwad8641@gmail.com</p>
+        <p>Phone: 8605775178</p>
+        <p>Location: Jalgaon</p>
+        <div class="tags">
+          <span>Data Science</span>
+          <span>Web Design</span>
+          <span>Software Projects</span>
+          <span>Internships</span>
+        </div>
+      </div>
+
+      <form class="form show" novalidate>
+        <label for="name">Your Name</label>
+        <input id="name" type="text" name="name" placeholder="Enter your name" required minlength="3">
+        <p class="error" id="nameError"></p>
+
+        <label for="email">Email Address</label>
+        <input id="email" type="email" name="email" placeholder="Enter your email" required>
+        <p class="error" id="emailError"></p>
+
+        <label for="password">Password</label>
+        <input id="password" type="password" name="password" placeholder="Enter a password" required minlength="6">
+        <p class="error" id="passwordError"></p>
+
+        <label for="project">Project Type</label>
+        <select id="project" name="project">
+          <option>Portfolio Website</option>
+          <option>Landing Page</option>
+          <option>UI Refresh</option>
+          <option>Frontend Help</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" placeholder="Tell me what you want to build..." required></textarea>
+        <p class="error" id="messageError"></p>
+
+        <button class="btn main-btn" type="submit">Send Message</button>
+        <p class="note">This form now uses required field, email, and password validation for the assignment.</p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-in">
+      <p>&copy; <span id="year"></span> Ajay Gaikwad</p>
+      <div class="foot-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="blog.html">Blog</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
