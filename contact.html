@@ -3,10 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Ajay</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Contact | Ajay's Portfolio</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -22,61 +19,67 @@
         <li><a href="about.html">About</a></li>
         <li><a href="resume.html">Resume</a></li>
         <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Projects</a>
+          <div class="dropdown-content">
+            <a href="projects/calculator.html">Calculator</a>
+            <a href="projects/todo.html">To-Do List</a>
+            <a href="projects/clock.html">Digital Clock</a>
+          </div>
+        </li>
       </ul>
       <button class="theme-btn" type="button">Dark</button>
     </nav>
   </header>
 
-  <main class="sec wrap page">
-    <div class="head show">
-      <p class="small">Contact</p>
-      <h1>Let's connect for internships, software projects, or web development work.</h1>
-    </div>
-
-    <div class="grid two">
-      <div class="card show">
-        <h2>Contact details</h2>
-        <p>Email: ajaygaikwad8641@gmail.com</p>
-        <p>Phone: 8605775178</p>
-        <p>Location: Jalgaon</p>
-        <div class="tags">
-          <span>Data Science</span>
-          <span>Web Design</span>
-          <span>Software Projects</span>
-          <span>Internships</span>
+  <main class="wrap">
+    <section class="sec">
+      <div class="head">
+        <h1>Get In <span>Touch</span></h1>
+        <p class="text">Have a project in mind or want to collaborate? Feel free to reach out!</p>
+      </div>
+      
+      <div class="grid two">
+        <div class="box">
+          <h3>Contact Information</h3>
+          <p class="text2">Email: ajay@example.com</p>
+          <p class="text2">Phone: +1 (123) 456-7890</p>
+          <p class="text2">Location: San Francisco, CA</p>
+          
+          <div class="btns top-space">
+            <a href="#" class="btn alt-btn">LinkedIn</a>
+            <a href="#" class="btn alt-btn">GitHub</a>
+            <a href="#" class="btn alt-btn">Twitter</a>
+          </div>
+        </div>
+        
+        <div class="box">
+          <form class="form">
+            <label>
+              Your Name
+              <input type="text" placeholder="Enter your name" required>
+              <div class="error"></div>
+            </label>
+            <label>
+              Your Email
+              <input type="email" placeholder="Enter your email" required>
+              <div class="error"></div>
+            </label>
+            <label>
+              Subject
+              <input type="text" placeholder="What's this about?">
+            </label>
+            <label>
+              Message
+              <textarea rows="5" placeholder="Your message here..."></textarea>
+              <div class="error"></div>
+            </label>
+            <button type="submit" class="btn main-btn">Send Message</button>
+          </form>
         </div>
       </div>
-
-      <form class="form show" novalidate>
-        <label for="name">Your Name</label>
-        <input id="name" type="text" name="name" placeholder="Enter your name" required minlength="3">
-        <p class="error" id="nameError"></p>
-
-        <label for="email">Email Address</label>
-        <input id="email" type="email" name="email" placeholder="Enter your email" required>
-        <p class="error" id="emailError"></p>
-
-        <label for="password">Password</label>
-        <input id="password" type="password" name="password" placeholder="Enter a password" required minlength="6">
-        <p class="error" id="passwordError"></p>
-
-        <label for="project">Project Type</label>
-        <select id="project" name="project">
-          <option>Portfolio Website</option>
-          <option>Landing Page</option>
-          <option>UI Refresh</option>
-          <option>Frontend Help</option>
-        </select>
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="6" placeholder="Tell me what you want to build..." required></textarea>
-        <p class="error" id="messageError"></p>
-
-        <button class="btn main-btn" type="submit">Send Message</button>
-        <p class="note">This form now uses required field, email, and password validation for the assignment.</p>
-      </form>
-    </div>
+    </section>
   </main>
 
   <footer class="foot">
@@ -85,12 +88,11 @@
       <div class="foot-links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="resume.html">Resume</a>
-        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

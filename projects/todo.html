@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List | Ajay's Portfolio</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/todo.css">
+</head>
+<body>
+  <div class="bg b1"></div>
+  <div class="bg b2"></div>
+
+  <header class="top">
+    <nav class="wrap nav">
+      <a href="../index.html" class="logo">Ajay<span>.dev</span></a>
+      <button class="menu-btn" type="button">Menu</button>
+      <ul class="links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../resume.html">Resume</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Projects</a>
+          <div class="dropdown-content">
+            <a href="calculator.html">Calculator</a>
+            <a href="todo.html" class="active">To-Do List</a>
+            <a href="clock.html">Digital Clock</a>
+          </div>
+        </li>
+      </ul>
+      <button class="theme-btn" type="button">Dark</button>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="sec">
+      <div class="head">
+        <h1>Interactive <span>To-Do List</span></h1>
+        <p class="text">Manage your tasks with this simple yet powerful to-do list application.</p>
+      </div>
+      
+      <div class="box big-box">
+        <div class="todo-container">
+          <div class="todo-header">
+            <input type="text" id="todo-input" placeholder="Add new task...">
+            <button id="add-btn" class="btn main-btn">Add</button>
+          </div>
+          <ul id="todo-list"></ul>
+          <div class="todo-footer">
+            <span id="task-count">0 tasks</span>
+            <button id="clear-all" class="btn alt-btn">Clear All</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-in">
+      <p>&copy; <span id="year"></span> Ajay Gaikwad</p>
+      <div class="foot-links">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/todo.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+.clock-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.clock {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 700;
+  font-family: 'Space Grotesk', sans-serif;
+  color: #edf3ff;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0 10px rgba(99, 228, 255, 0.3);
+  transition: all 0.3s;
+}
+
+body.light .clock {
+  color: #1d2430;
+  text-shadow: 0 0 10px rgba(0, 109, 147, 0.2);
+}
+
+.colon {
+  margin: 0 5px;
+  animation: blink 1s infinite, float 3s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+#ampm {
+  font-size: 1.5rem;
+  margin-left: 10px;
+  font-weight: 500;
+  transition: color 0.5s ease;
+}
+
+.date {
+  font-size: 1.2rem;
+  color: #a5b5d1;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+body.light .date {
+  color: #616c7d;
+}
+
+#day, #month, #day-number, #year {
+  margin: 0 3px;
+  transition: all 0.3s;
+}
+
+#day {
+  animation: slideInLeft 0.5s ease-out;
+}
+
+#month {
+  animation: slideInRight 0.5s ease-out 0.1s;
+}
+
+#day-number {
+  animation: slideInLeft 0.5s ease-out 0.2s;
+}
+
+#year {
+  animation: slideInRight 0.5s ease-out 0.3s;
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Glow effect for seconds */
+#seconds {
+  text-shadow: 0 0 8px rgba(99, 228, 255, 0.5);
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  from { text-shadow: 0 0 8px rgba(99, 228, 255, 0.5); }
+  to { text-shadow: 0 0 15px rgba(99, 228, 255, 0.8); }
+}
+
+body.light #seconds {
+  text-shadow: 0 0 8px rgba(0, 109, 147, 0.4);
+  animation: pulseLight 1s infinite alternate;
+}
+
+@keyframes pulseLight {
+  from { text-shadow: 0 0 8px rgba(0, 109, 147, 0.4); }
+  to { text-shadow: 0 0 15px rgba(0, 109, 147, 0.6); }
+}
